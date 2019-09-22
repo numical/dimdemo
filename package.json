@@ -9,7 +9,7 @@
     "build:noB": "DIM_SWITCH_B=true webpack",
     "build:noC": "DIM_SWITCH_C=true webpack",
     "dev": "node ./src/server.js",
-    "start": "node ./public/alphabet-server.js"
+    "start": "node ./build/alphabet-server.js"
   },
   "author": "Mike Evans",
   "license": "ISC",

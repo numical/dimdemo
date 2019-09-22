@@ -65,6 +65,6 @@ typings/
 
 # build
 .cache
-public
+build
 dist
 
