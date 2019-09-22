@@ -1,15 +1,16 @@
 const express = require('express')
-const setupA = require('./a');
-const setupB = require('./b');
-const setupC = require('./c');
 
 const port = 8080;
 
 const app = express()
 if ( process.env.DIM_SWITCH_A !== 'true') {
-  setupA(app);
+  require('./a')(app);
 };
-setupB(app);
-setupC(app);
+if ( process.env.DIM_SWITCH_B !== 'true') {
+  require('./b')(app);
+};
+if ( process.env.DIM_SWITCH_C !== 'true') {
+  require('./c')(app);
+};
 
-app.listen(port, () => console.log(`Alphaet server listening on port ${port}`));
+app.listen(port, () => console.log(`Alphabet server listening on port ${port}`));
