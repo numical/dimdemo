@@ -1,0 +1,28 @@
+{
+  "name": "dimdemo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:noA": "DIM_SWITCH_A=true webpack",
+    "build:noB": "DIM_SWITCH_B=true webpack",
+    "build:noC": "DIM_SWITCH_C=true webpack",
+    "dev": "node ./src/server.js",
+    "start": "node ./public/alphabet-server.js"
+  },
+  "author": "Mike Evans",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.2",
+    "webpack-bundle-analyzer": "^3.5.1",
+    "webpack-cli": "^3.3.9"
+  }
+}
